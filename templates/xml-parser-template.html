@@ -1,0 +1,14 @@
+<ul class="list-group" ng-model="customObjListModel">
+  <li class="list-group-item" ng-repeat="customObject in customObjectList | filter: search">
+    <a data-toggle="collapse" href="#{{customObject['_object-id']}}" >
+      {{customObject['_object-id']}}
+    </a>
+    <div class="collapse" id="{{customObject['_object-id']}}">
+      <pre>
+        <code>
+          {{customObject['object-attribute']['__text']}}
+        </code>
+      </pre>
+    </div>
+  </li>
+</ul>
